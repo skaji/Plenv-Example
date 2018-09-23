@@ -6,12 +6,12 @@ matrix:
 
 before_install:
   - brew install plenv
-  - brew install perl-build
+  - brew install perl-build --HEAD
   - eval "$(plenv init -)"
 
 script:
   - ls -al /usr/local/bin/
-  - realink -f /usr/local/bin/perl-build
+  - readlink -f /usr/local/bin/perl-build
   - cat /usr/local/bin/perl-build
   - perl-build --version
   - ls -al $(plenv root)
