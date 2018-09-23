@@ -6,14 +6,12 @@ matrix:
 
 before_install:
   - brew install plenv
-  - brew install perl-build --HEAD
+  - brew install perl-build
   - eval "$(plenv init -)"
 
 script:
-  - which -a perl
-  - which -a perl-build
-  - perl -V
-  - perl -MHTTP::Tinyish\ 9999
+  - ls -al /usr/local/bin/
+  - realink -f /usr/local/bin/perl-build
   - perl-build --version
   - plenv install 5.28.0
   - plenv install --list
