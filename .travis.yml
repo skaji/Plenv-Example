@@ -10,6 +10,10 @@ before_install:
   - eval "$(plenv init -)"
 
 script:
+  - which -a perl
+  - which -a perl-build
+  - perl -V
+  - perl -MHTTP::Tinyish\ 9999
   - perl-build --version
   - plenv install 5.28.0
   - plenv install --list
