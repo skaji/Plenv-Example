@@ -12,6 +12,9 @@ before_install:
 script:
   - ls -al /usr/local/bin/
   - realink -f /usr/local/bin/perl-build
+  - cat /usr/local/bin/perl-build
   - perl-build --version
+  - ls -al $(plenv root)
+  - ls -al $(plenv root)/plugins
   - plenv install 5.28.0
   - plenv install --list
