@@ -13,3 +13,4 @@ sub run {
 
 run "find", "/usr/local/Cellar/perl-build/HEAD-92222db", "-type", "f";
 run "cat", "/usr/local/Cellar/perl-build/HEAD-92222db/libexec/bin/plenv-install";
+run "cat", "/usr/local/Cellar/perl-build/HEAD-92222db/libexec/bin/perl-build";
