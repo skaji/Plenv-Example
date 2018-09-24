@@ -10,11 +10,6 @@ before_install:
   - eval "$(plenv init -)"
 
 script:
-  - ls -al /usr/local/bin/
-  - readlink -f /usr/local/bin/perl-build
-  - cat /usr/local/bin/perl-build
-  - perl-build --version
-  - ls -al $(plenv root)
-  - ls -al $(plenv root)/plugins
+  - perl test.pl
   - plenv install 5.28.0
   - plenv install --list
