@@ -11,7 +11,5 @@ sub run {
     system @_;
 }
 
-run "cat", "/usr/local/bin/perl-build";
-run "cat", "/usr/local/bin/plenv-install";
-my $dir = dirname abs_path "/usr/local/bin/perl-build";
-run "find", $dir, "-type", "f";
+run "find", "/usr/local/Cellar/perl-build/HEAD-92222db", "-type", "f";
+run "cat", "/usr/local/Cellar/perl-build/HEAD-92222db/libexec/bin/plenv-install";
